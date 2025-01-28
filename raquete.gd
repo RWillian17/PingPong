@@ -17,4 +17,5 @@ func _process(delta: float) -> void:
 		position.x = 1050
 	elif position.x <= 80:
 		position.x = 80
-	print("raquete esta em: ", position)
+	print("raquete esta em: ", position, "posicao")
+	
