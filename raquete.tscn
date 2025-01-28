@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://liqcgxgbomve"]
+
+[ext_resource type="Texture2D" uid="uid://7i1uoukabkv3" path="res://Imagens/Raquete.png" id="1_7nuy8"]
+[ext_resource type="Script" path="res://raquete.gd" id="1_qfhue"]
+
+[node name="Raquete" type="Node2D"]
+script = ExtResource("1_qfhue")
+
+[node name="Raquete" type="Sprite2D" parent="."]
+texture = ExtResource("1_7nuy8")

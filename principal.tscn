@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dw6mt0pdhoryi"]
+
+[ext_resource type="Texture2D" uid="uid://gd5754o4fs1n" path="res://Imagens/Fundo.png" id="1_7rvlj"]
+[ext_resource type="PackedScene" uid="uid://chiut4hjy4hel" path="res://bola.tscn" id="2_3coef"]
+[ext_resource type="PackedScene" uid="uid://liqcgxgbomve" path="res://raquete.tscn" id="3_payvf"]
+
+[node name="Principal" type="Node2D"]
+
+[node name="Fundo" type="Sprite2D" parent="."]
+position = Vector2(574, 327)
+texture = ExtResource("1_7rvlj")
+
+[node name="Bola" parent="." instance=ExtResource("2_3coef")]
+position = Vector2(634, 368)
+
+[node name="Raquete" parent="." instance=ExtResource("3_payvf")]
+position = Vector2(594, 577)

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://chiut4hjy4hel"]
+
+[ext_resource type="Script" path="res://bola.gd" id="1_onuvj"]
+[ext_resource type="Texture2D" uid="uid://cpq77x25bemc5" path="res://Imagens/Bola.png" id="1_uw7hd"]
+
+[node name="Bola" type="Node2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_onuvj")
+
+[node name="Bola" type="Sprite2D" parent="."]
+texture = ExtResource("1_uw7hd")
