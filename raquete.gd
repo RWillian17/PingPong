@@ -1,7 +1,9 @@
 extends Node2D
 
+class_name RAQUETE
+
 var ponto: int = 0
-var speedx: int = 200
+var speedx: int = 300
 
 signal acertou
 
@@ -25,6 +27,8 @@ func _process(delta: float) -> void:
 func retornaPonto () -> int:
 	return ponto
 
+func resetPonto () -> void:
+	ponto = 0
 
 
 func acertaramRaquete(area: Area2D) -> void:

@@ -13,7 +13,7 @@ position = Vector2(574, 327)
 texture = ExtResource("1_7rvlj")
 
 [node name="Bola" parent="." instance=ExtResource("2_3coef")]
-position = Vector2(634, 368)
+position = Vector2(562, 93)
 
 [node name="Raquete" parent="." instance=ExtResource("3_payvf")]
 position = Vector2(594, 577)
@@ -28,4 +28,5 @@ theme_override_colors/font_shadow_color = Color(0.537255, 1, 0.945098, 1)
 theme_override_font_sizes/font_size = 32
 text = "Pontuação: "
 
+[connection signal="gameover" from="Bola" to="." method="perdeu"]
 [connection signal="acertou" from="Raquete" to="." method="fezPonto"]
