@@ -1,10 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://liqcgxgbomve"]
+[gd_scene load_steps=4 format=3 uid="uid://liqcgxgbomve"]
 
 [ext_resource type="Texture2D" uid="uid://7i1uoukabkv3" path="res://Imagens/Raquete.png" id="1_7nuy8"]
 [ext_resource type="Script" path="res://raquete.gd" id="1_qfhue"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_arlh4"]
+size = Vector2(201, 20)
 
 [node name="Raquete" type="Node2D"]
 script = ExtResource("1_qfhue")
 
 [node name="Raquete" type="Sprite2D" parent="."]
 texture = ExtResource("1_7nuy8")
+
+[node name="AreaRaquete" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaRaquete"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_arlh4")
+
+[connection signal="area_entered" from="AreaRaquete" to="." method="acertaramRaquete"]

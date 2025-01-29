@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://chiut4hjy4hel"]
+[gd_scene load_steps=4 format=3 uid="uid://chiut4hjy4hel"]
 
 [ext_resource type="Script" path="res://bola.gd" id="1_onuvj"]
 [ext_resource type="Texture2D" uid="uid://cpq77x25bemc5" path="res://Imagens/Bola.png" id="1_uw7hd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dcppe"]
+size = Vector2(10, 10)
 
 [node name="Bola" type="Node2D"]
 scale = Vector2(2, 2)
@@ -9,3 +12,10 @@ script = ExtResource("1_onuvj")
 
 [node name="Bola" type="Sprite2D" parent="."]
 texture = ExtResource("1_uw7hd")
+
+[node name="AreaBola" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaBola"]
+shape = SubResource("RectangleShape2D_dcppe")
+
+[connection signal="area_entered" from="AreaBola" to="." method="acertaramBola"]
